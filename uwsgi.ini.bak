@@ -1,0 +1,5 @@
+[uwsgi]
+socket = 127.0.0.1:3001
+chdir = path-to/phonepad-trie/
+virtualenv = path-to-python-env/
+wsgi = server

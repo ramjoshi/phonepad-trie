@@ -1,15 +1,12 @@
-import sys, os
+import os
 abspath = os.path.dirname(__file__)
-sys.path.append(abspath)
-import site
-site.addsitedir('/home/ram/dev/myenv/lib/python2.6/site-packages/')
 import web
 import json
 import suggester
 
 urls = (
-	'/', 'suggest_ugly',
-	'/seq/(.*)', 'suggest_pretty'
+	'/phonepad-suggestion/?', 'suggest_ugly',
+	'/phonepad-suggestion/seq/(.*)', 'suggest_pretty'
 )
 
 class suggest_ugly:
